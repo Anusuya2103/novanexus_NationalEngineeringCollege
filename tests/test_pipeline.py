@@ -153,16 +153,21 @@ def test_factor_contributions_with_empty_importances():
 
 def test_whatif_disclaimer():
     """simulate_whatif must always return the correct disclaimer."""
+    import pandas as pd
+
+    from data.build_windows import _prepare_ehr, build_patient_windows
     from models.whatif import simulate_whatif, load_model, load_scalers
+
     scaler_ts, scaler_ehr = load_scalers()
     model = load_model()
 
-    X_ts  = np.load(os.path.join(PROC_DIR, "X_ts_test.npy"))
-    X_ehr = np.load(os.path.join(PROC_DIR, "X_ehr_test.npy"))
-    ts_raw  = scaler_ts.inverse_transform(X_ts[0]).astype(np.float32)
-    ehr_raw = scaler_ehr.inverse_transform(X_ehr[0:1]).astype(np.float32).squeeze()
+    demo_dir = os.path.join(BASE, "data/demo")
+    cgm = pd.read_parquet(os.path.join(demo_dir, "cgm_P0001.parquet"))
+    windows, _, _ = build_patient_windows(cgm)
+    ehr = pd.read_csv(os.path.join(demo_dir, "ehr.csv"))
+    ehr_by_patient, _ = _prepare_ehr(ehr)
 
-    result = simulate_whatif(ts_raw, ehr_raw, {"reduce_carbs_g": 20.0},
+    result = simulate_whatif(windows[0], ehr_by_patient["P0001"], {"reduce_carbs_g": 20.0},
                              model, scaler_ts, scaler_ehr, n_mc=5)
     assert result["disclaimer"] == "model simulation, not causal or clinical advice"
 
