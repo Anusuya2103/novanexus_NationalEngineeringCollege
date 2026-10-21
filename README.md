@@ -10,14 +10,14 @@ HealthTwin: a synthetic-data digital twin prototype for Type 2 diabetes glucose-
 
 - Team name: `<<FILL: team name>>`
 - Copyright holder: `<<FILL: copyright holder>>` (also required in `LICENSE`)
-- Team leader: `<<FILL: leader name>>`
-- Members and roles: `<<FILL: member names and roles>>`
+- Team leader: `<<FILL: your name>>`
+- Member: `<<FILL: your name>>` — Team Leader, Developer, and ML Engineer (sole team member)
 - Suggested public repository folder: `<<FILL: TeamName>>_NationalEngineeringCollege`
 
 ## College / Incubator Information
 
 - College / department: National Engineering College, Kovilpatti, AI & Data Science.
-- Incubator: `<<FILL: incubator name or none>>`
+- Incubator: No incubator details provided; confirm with the college before submission.
 
 ## Problem Statement
 
