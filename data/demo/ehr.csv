@@ -1,0 +1,2 @@
+patient_id,age,sex,diabetes_duration_yrs,bmi,hba1c_pct,sbp_mmhg,dbp_mmhg,medication,prior_hyper_events_90d,n_comorbidities,comorbid_hypertension,comorbid_dyslipidemia,comorbid_CKD_stage2,comorbid_NAFLD,comorbid_neuropathy,comorbid_retinopathy,TCF7L2_risk,KCNJ11_risk,PPARG_risk
+P0001,58,M,8,27.4,7.2,132,84,Metformin,2,1,1,0,0,0,0,0,1,0,0

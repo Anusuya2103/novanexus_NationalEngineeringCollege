@@ -1,0 +1,59 @@
+# Python environments, caches, and coverage
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage/
+htmlcov/
+
+# Frontend dependencies and generated output
+frontend/node_modules/
+frontend/dist/
+frontend/coverage/
+frontend/.vite/
+
+# Generated training data; retain only the small inference metadata.
+data/raw/
+data/processed/*
+!data/processed/ehr_cols.json
+!data/processed/ts_channels.json
+!data/processed/scaler_ehr.pkl
+!data/processed/scaler_ts.pkl
+
+# Local model outputs and experiment artifacts
+/models/
+results/ablation_*.pt
+results/training_log.json
+results/plots/
+!results/metrics.json
+!results/calibration_temp.json
+!results/saliency_ts.json
+!results/sanity_tests.json
+!results/shap_values.json
+!results/plots/
+!results/plots/*.png
+
+# Logs, local-only notes, screenshots, videos, and traces
+*.log
+api.log
+train_log.txt
+DECISIONS.md
+TEST_REPORT.md
+shots/
+test-results/
+playwright-report/
+*.webm
+*.trace
+.env
+.env.*
+!.env.example
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

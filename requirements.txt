@@ -1,0 +1,21 @@
+# Runtime, training, and evaluation dependencies pinned to the validated environment.
+torch==2.13.0
+scikit-learn==1.8.0
+xgboost==3.2.0
+shap==0.51.0
+numpy==2.4.6
+pandas==2.3.3
+scipy==1.17.1
+pyarrow==24.0.0
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+pydantic==2.13.4
+python-multipart==0.0.32
+matplotlib==3.10.9
+joblib==1.5.3
+tqdm==4.67.3
+plotly==6.7.0
+requests==2.34.2
+pytest==8.2.2
+reportlab==5.0.0
+pypdf==6.21.1

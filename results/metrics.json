@@ -1,0 +1,173 @@
+{
+  "dataset_info": {
+    "n_patients": 120,
+    "simulation_days": 30,
+    "cgm_interval_min": 5,
+    "input_window_hours": 6,
+    "label_horizon_hours": 2,
+    "hyperglycaemia_threshold_mgdl": 180,
+    "class_balance": {
+      "train": {
+        "n_total": 239316,
+        "n_positive": 139541,
+        "n_negative": 99775,
+        "pos_rate": 0.5831,
+        "pos_weight": 0.715
+      },
+      "val": {
+        "n_total": 51282,
+        "n_positive": 26473,
+        "n_negative": 24809,
+        "pos_rate": 0.5162,
+        "pos_weight": 0.9371
+      },
+      "test": {
+        "n_total": 51282,
+        "n_positive": 25760,
+        "n_negative": 25522,
+        "pos_rate": 0.5023,
+        "pos_weight": 0.9908
+      }
+    }
+  },
+  "models": {
+    "fusion_full": {
+      "auroc": 0.9157,
+      "auprc": 0.9221,
+      "precision": 0.883,
+      "recall": 0.7629,
+      "f1": 0.8186,
+      "specificity": 0.898,
+      "ece": 0.0582,
+      "confusion_matrix": {
+        "tp": 19653,
+        "fp": 2603,
+        "tn": 22919,
+        "fn": 6107
+      },
+      "forecast": {
+        "+30min": {
+          "mae": 152.13,
+          "rmse": 157.28
+        },
+        "+60min": {
+          "mae": 152.1,
+          "rmse": 157.31
+        },
+        "+90min": {
+          "mae": 151.43,
+          "rmse": 156.73
+        },
+        "+120min": {
+          "mae": 151.43,
+          "rmse": 156.75
+        }
+      },
+      "mc_dropout_interval_coverage_90pct": 0.0,
+      "calibration_temperature": 0.9883,
+      "label": "Full Fusion (GRU + EHR)"
+    },
+    "ablation_glucose_only": {
+      "auroc": 0.8142,
+      "auprc": 0.8458,
+      "precision": 0.842,
+      "recall": 0.581,
+      "f1": 0.6876,
+      "specificity": 0.89,
+      "ece": 0.054,
+      "confusion_matrix": {
+        "tp": 14967,
+        "fp": 2808,
+        "tn": 22714,
+        "fn": 10793
+      },
+      "label": "GRU (glucose only)"
+    },
+    "ablation_wearables_no_ehr": {
+      "auroc": 0.908,
+      "auprc": 0.9128,
+      "precision": 0.8604,
+      "recall": 0.7717,
+      "f1": 0.8136,
+      "specificity": 0.8736,
+      "ece": 0.0455,
+      "confusion_matrix": {
+        "tp": 19878,
+        "fp": 3226,
+        "tn": 22296,
+        "fn": 5882
+      },
+      "label": "GRU + Wearables (no EHR)"
+    },
+    "xgboost": {
+      "auroc": 0.9417,
+      "auprc": 0.9452,
+      "precision": 0.9009,
+      "recall": 0.8048,
+      "f1": 0.8501,
+      "specificity": 0.9106,
+      "ece": 0.0376,
+      "confusion_matrix": {
+        "tp": 20731,
+        "fp": 2281,
+        "tn": 23241,
+        "fn": 5029
+      },
+      "label": "XGBoost (tabular)"
+    },
+    "logreg": {
+      "auroc": 0.9059,
+      "auprc": 0.9092,
+      "precision": 0.8486,
+      "recall": 0.7762,
+      "f1": 0.8108,
+      "specificity": 0.8602,
+      "ece": 0.034,
+      "confusion_matrix": {
+        "tp": 19994,
+        "fp": 3567,
+        "tn": 21955,
+        "fn": 5766
+      },
+      "label": "Logistic Regression"
+    }
+  },
+  "ablation_table": [
+    {
+      "model": "GRU (glucose only)",
+      "auroc": 0.8142,
+      "auprc": 0.8458,
+      "f1": 0.6876
+    },
+    {
+      "model": "GRU + Wearables (no EHR)",
+      "auroc": 0.908,
+      "auprc": 0.9128,
+      "f1": 0.8136
+    },
+    {
+      "model": "Full Fusion (GRU + EHR)",
+      "auroc": 0.9157,
+      "auprc": 0.9221,
+      "f1": 0.8186
+    },
+    {
+      "model": "XGBoost (tabular)",
+      "auroc": 0.9417,
+      "auprc": 0.9452,
+      "f1": 0.8501
+    },
+    {
+      "model": "Logistic Regression",
+      "auroc": 0.9059,
+      "auprc": 0.9092,
+      "f1": 0.8108
+    }
+  ],
+  "honest_comparison": {
+    "fusion_auroc": 0.9157,
+    "xgboost_auroc": 0.9417,
+    "diff_percentage_points": -2.6,
+    "note": "Full fusion model underperforms vs. XGBoost by 2.60 percentage points on AUROC. On synthetic data, tree models can match or beat deep learning \u2014 this is expected."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "carbs_15min": 0.034246,
+  "glucose_mgdl": 0.01365,
+  "steps_5min": 0.012803,
+  "heart_rate_bpm": 0.010234,
+  "sleep_state": 0.006626,
+  "hrv_ms": 0.004268,
+  "med_taken": 0.001908
+}
