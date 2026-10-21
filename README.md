@@ -8,16 +8,18 @@ HealthTwin: a synthetic-data digital twin prototype for Type 2 diabetes glucose-
 
 ## Team Details
 
-- Team name: `<<FILL: team name>>`
-- Copyright holder: `<<FILL: copyright holder>>` (also required in `LICENSE`)
-- Team leader: `<<FILL: your name>>`
-- Member: `<<FILL: your name>>` — Team Leader, Developer, and ML Engineer (sole team member)
-- Suggested public repository folder: `<<FILL: TeamName>>_NationalEngineeringCollege`
+- Team name: novanexus
+- Copyright holder: Anusuya G (also listed in `LICENSE`)
+- Team leader and sole member: Anusuya G — Team Leader, Developer, and ML Engineer
+- GitHub repository: [Anusuya2103/healthtwin](https://github.com/Anusuya2103/healthtwin)
+- Submission folder naming target: `novanexus_NationalEngineeringCollege` (the provided GitHub repository is currently named `healthtwin`)
 
 ## College / Incubator Information
 
 - College / department: National Engineering College, Kovilpatti, AI & Data Science.
-- Incubator: No incubator details provided; confirm with the college before submission.
+- Incubator: Dr. K. Mani Sekar, Head, NEC Business Incubator, National Engineering College (Autonomous), K.R. Nagar, Kovilpatti, Thoothukudi District 628503, Tamil Nadu, India.
+- Email: bicnec@nec.edu.in
+- Phone: +91 9442182502 | +91 7708605247
 
 ## Problem Statement
 

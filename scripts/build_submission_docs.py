@@ -128,7 +128,7 @@ def render_presentation(architecture_image: Path) -> None:
     output_path = DOCS / "presentation.pdf"
     deck = canvas.Canvas(str(output_path), pagesize=(PAGE_W, PAGE_H), pageCompression=1)
     slides = [
-        ("HealthTwin", ["A synthetic-data digital twin prototype for T2D glucose-spike risk.", "Happiest Health Digital Twin Challenge submission", "Single-member team; member name and team name are pending confirmation."]),
+        ("HealthTwin", ["A synthetic-data digital twin prototype for T2D glucose-spike risk.", "Happiest Health Digital Twin Challenge submission", "Team novanexus | Anusuya G | National Engineering College, Kovilpatti"]),
         ("The problem", ["A reactive alert arrives after glucose has crossed its threshold.", "Prototype question: can a two-hour spike risk be estimated and explained?", "Target event: glucose >180 mg/dL within two hours."]),
         ("Healthcare use case | India", ["Clinician-supervised review: patient history → risk estimate → factor review → what-if exploration.", "Indian meal examples and Asian-Indian BMI cutoffs are intended context features.", "No clinician workflow integration or clinical evaluation has been performed."]),
         ("Data and cohort", ["Procedurally generated synthetic EHR and 5-minute CGM/wearable traces.", "Generators describe a 500-patient cohort; the checked-in demo bundle uses P0001 only.", "Wearable relationships and physiology are simplified assumptions, not validated data."]),
