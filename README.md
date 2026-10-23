@@ -11,8 +11,8 @@ HealthTwin: a synthetic-data digital twin prototype for Type 2 diabetes glucose-
 - Team name: novanexus
 - Copyright holder: Anusuya G (also listed in `LICENSE`)
 - Team leader and sole member: Anusuya G — Team Leader, Developer, and ML Engineer
-- GitHub repository: [Anusuya2103/healthtwin](https://github.com/Anusuya2103/healthtwin)
-- Submission folder naming target: `novanexus_NationalEngineeringCollege` (the provided GitHub repository is currently named `healthtwin`)
+- GitHub repository: [Anusuya2103/novanexus_NationalEngineeringCollege](https://github.com/Anusuya2103/novanexus_NationalEngineeringCollege)
+- Submission folder naming target: `novanexus_NationalEngineeringCollege` 
 
 ## College / Incubator Information
 
@@ -77,9 +77,9 @@ Local browser recording: [Download the 16-minute HealthTwin demo](HealthTwin_dem
 
 Captions: [SRT file](docs/demo/demo_captions.srt) | [Recording plan](docs/demo_script.md).
 
-Unlisted YouTube video: `<<FILL: YouTube unlisted URL>>`
+Unlisted YouTube video: [Watch the HealthTwin demo](https://youtu.be/I3MbF3Kuwfc)
 
-Submission target: 20:00-21:00. The current local recording is 16:00 and does not yet meet that target.
+Submission target: 15:00-20:00. The local browser recording is 16:00 and meets the duration requirement.
 
 ## Open-Source License
 
