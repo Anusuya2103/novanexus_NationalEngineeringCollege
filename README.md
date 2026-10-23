@@ -73,8 +73,13 @@ Limitations include synthetic-only data, rule-based wearable assumptions, no ext
 
 ## Demo Video
 
-Unlisted YouTube video: `<<FILL: YouTube unlisted URL>>`  
-Target duration: 20:00-21:00. Upload and verify public-link access before submission.
+Local browser recording: [Download the 16-minute HealthTwin demo](HealthTwin_demo_16min.mp4).
+
+Captions: [SRT file](docs/demo/demo_captions.srt) | [Recording plan](docs/demo_script.md).
+
+Unlisted YouTube video: `<<FILL: YouTube unlisted URL>>`
+
+Submission target: 20:00-21:00. The current local recording is 16:00 and does not yet meet that target.
 
 ## Open-Source License
 

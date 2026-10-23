@@ -1,0 +1,404 @@
+1
+00:00:00,000 --> 00:00:10,000
+Welcome to HealthTwin, a research prototype for exploring
+short-horizon glucose-event prediction and explanation.
+
+2
+00:00:10,000 --> 00:00:20,000
+This walkthrough follows one synthetic demo patient through
+the dashboard, patient context, twin, prediction, and reports.
+
+3
+00:00:20,000 --> 00:00:30,000
+The interface is designed to connect several data views
+around the same selected patient and time window.
+
+4
+00:00:30,000 --> 00:00:40,000
+This is not a medical device, clinical record,
+or source of treatment recommendations.
+
+5
+00:00:40,000 --> 00:00:50,000
+All displayed data are synthetic, and model outputs
+should be interpreted as research demonstrations only.
+
+6
+00:00:50,000 --> 00:01:02,000
+We begin on Home with patient P0001 selected.
+The header also shows the application’s mock-data status.
+
+7
+00:01:02,000 --> 00:01:14,000
+The EHR Profile summarizes context such as age,
+BMI, HbA1c, blood pressure, and medication.
+
+8
+00:01:14,000 --> 00:01:26,000
+These values help orient the selected synthetic record;
+they are not a substitute for a medical history.
+
+9
+00:01:26,000 --> 00:01:38,000
+Live Wearables presents the simulated glucose, heart-rate,
+heart-rate-variability, activity, sleep, and stress indicators.
+
+10
+00:01:38,000 --> 00:01:50,000
+The word simulated matters: these cards are not
+connected to a person’s wearable device.
+
+11
+00:01:50,000 --> 00:02:02,000
+Data Fusion sketches how EHR and wearable inputs
+are brought together for a model-window view.
+
+12
+00:02:02,000 --> 00:02:14,000
+The central twin visualization marks model-derived indicators;
+it does not depict measured anatomy or organ function.
+
+13
+00:02:14,000 --> 00:02:26,000
+Below it, the event definition names the displayed
+spike threshold and the two-hour prediction horizon.
+
+14
+00:02:26,000 --> 00:02:38,000
+The chart places observed glucose beside a forecast
+and marks the configured display threshold.
+
+15
+00:02:38,000 --> 00:02:50,000
+In this captured window, the interface reports a
+194 milligram-per-deciliter latest glucose value.
+
+16
+00:02:50,000 --> 00:03:02,000
+The forecast and risk band are model outputs
+for this synthetic example, not a diagnosis.
+
+17
+00:03:02,000 --> 00:03:14,000
+Next, I’ll move the shared time cursor to
+show how the selected window anchors the dashboard.
+
+18
+00:03:14,000 --> 00:03:26,000
+The time slider and play control change the
+selected point used across the app’s views.
+
+19
+00:03:26,000 --> 00:03:38,000
+Opening alerts reveals application notifications associated with
+the current demonstration state.
+
+20
+00:03:38,000 --> 00:03:50,000
+An alert here is a model or interface signal,
+not a clinical decision rule.
+
+21
+00:03:50,000 --> 00:04:02,000
+I’ll return to the navigation and open Patient Profile,
+keeping the same synthetic patient selected.
+
+22
+00:04:02,000 --> 00:04:14,000
+The profile gathers record-level context and selected-window
+information into a focused page.
+
+23
+00:04:14,000 --> 00:04:26,000
+Age, sex, BMI, HbA1c, medication, and diabetes
+duration provide descriptive context for this example.
+
+24
+00:04:26,000 --> 00:04:38,000
+The glucose and prediction sections connect that context
+to a specific point in the time series.
+
+25
+00:04:38,000 --> 00:04:50,000
+When recording, pause on each section long enough
+for its labels and values to be read.
+
+26
+00:04:50,000 --> 00:05:02,000
+The profile is still a synthetic demonstration record;
+no real patient information is shown.
+
+27
+00:05:02,000 --> 00:05:14,000
+I’ll now open Digital Twin to inspect the
+model’s summary for the selected window.
+
+28
+00:05:14,000 --> 00:05:26,000
+The body graphic is an explanatory interface, not
+an anatomical scan or physiological measurement.
+
+29
+00:05:26,000 --> 00:05:38,000
+The current model-window panel reports a glucose-spike prediction
+for the next two hours.
+
+30
+00:05:38,000 --> 00:05:50,000
+The displayed probability belongs to this selected synthetic
+window and should not guide care.
+
+31
+00:05:50,000 --> 00:06:02,000
+Window statistics summarize the recent values, including average,
+variability, minimum, and maximum glucose.
+
+32
+00:06:02,000 --> 00:06:14,000
+Patient context repeats selected EHR fields so viewers
+can compare them with the model summary.
+
+33
+00:06:14,000 --> 00:06:26,000
+The factor groups show attribution assigned by the
+model for this window.
+
+34
+00:06:26,000 --> 00:06:38,000
+Attribution describes which inputs influenced this output;
+it does not establish cause and effect.
+
+35
+00:06:38,000 --> 00:06:50,000
+The page also states that the twin is
+research-only and does not estimate hidden physiology.
+
+36
+00:06:50,000 --> 00:07:02,000
+From here, I’ll open Predictions to inspect the
+score, explanation, and model card together.
+
+37
+00:07:02,000 --> 00:07:14,000
+The prediction page identifies the event definition and
+the selected patient window.
+
+38
+00:07:14,000 --> 00:07:26,000
+Its factor contribution list is normalized to a
+complete share of the displayed model attribution.
+
+39
+00:07:26,000 --> 00:07:38,000
+Recent glucose trend is the largest contribution in
+this captured example, followed by other input groups.
+
+40
+00:07:38,000 --> 00:07:50,000
+The “Why now” explanation points to the displayed
+threshold and the recent glucose slope.
+
+41
+00:07:50,000 --> 00:08:02,000
+These are explanatory model signals, not validated
+clinical criteria or causal conclusions.
+
+42
+00:08:02,000 --> 00:08:14,000
+Window statistics show the mean, spread, minimum, maximum,
+last value, and recent slope.
+
+43
+00:08:14,000 --> 00:08:26,000
+The model card lists AUROC, AUPRC, F1,
+and calibration error from a stored snapshot.
+
+44
+00:08:26,000 --> 00:08:38,000
+Confidence intervals are unavailable, so these point estimates
+should not be read as precise guarantees.
+
+45
+00:08:38,000 --> 00:08:50,000
+The page also warns that stored metrics and
+currently processed labels need reconciliation.
+
+46
+00:08:50,000 --> 00:09:02,000
+That provenance caveat is important context, not
+fine print to skip over.
+
+47
+00:09:02,000 --> 00:09:14,000
+Now I’ll open What-If Simulator and wait
+for its baseline scenarios to load.
+
+48
+00:09:14,000 --> 00:09:26,000
+The page compares a current trajectory with alternative
+synthetic scenarios over the same two-hour window.
+
+49
+00:09:26,000 --> 00:09:38,000
+A warning states that stored monotonicity checks fail;
+scenario changes may move in unexpected directions.
+
+50
+00:09:38,000 --> 00:09:50,000
+I’ll select a meal preset to change the
+carbohydrate input for a custom scenario.
+
+51
+00:09:50,000 --> 00:10:02,000
+The controls also include activity, sleep quality,
+medication adherence, stress, and glucose offset.
+
+52
+00:10:02,000 --> 00:10:14,000
+These are model inputs for an experiment, not
+instructions for changing someone’s behavior or treatment.
+
+53
+00:10:14,000 --> 00:10:26,000
+After choosing an input, I’ll run the custom
+scenario and wait for the response.
+
+54
+00:10:26,000 --> 00:10:38,000
+The chart updates to compare the available trajectories
+against the displayed glucose threshold.
+
+55
+00:10:38,000 --> 00:10:50,000
+The outcome cards summarize peak glucose, spike probability,
+approximate time above threshold, and probability change.
+
+56
+00:10:50,000 --> 00:11:02,000
+A difference in this scenario is a model
+comparison, not evidence of an intervention effect.
+
+57
+00:11:02,000 --> 00:11:14,000
+The simulator is useful for exploring model behavior
+and the sensitivity of its displayed outputs.
+
+58
+00:11:14,000 --> 00:11:26,000
+Its results can be counterintuitive, and the interface
+explicitly says they are not causal advice.
+
+59
+00:11:26,000 --> 00:11:38,000
+I’ll leave the result visible briefly, then
+move to the evaluation report.
+
+60
+00:11:38,000 --> 00:11:50,000
+Reports begins with a summary of stored
+classification metrics and their provenance caveat.
+
+61
+00:11:50,000 --> 00:12:02,000
+The page says confidence intervals are unavailable
+for the displayed metric snapshot.
+
+62
+00:12:02,000 --> 00:12:14,000
+Its comparison table includes the fusion model
+and several baseline or ablation models.
+
+63
+00:12:14,000 --> 00:12:26,000
+In this snapshot, the XGBoost baseline scores above
+the full fusion model on AUROC.
+
+64
+00:12:26,000 --> 00:12:38,000
+That result is shown honestly; model complexity does
+not guarantee better performance on synthetic data.
+
+65
+00:12:38,000 --> 00:12:50,000
+The robustness section reports failed checks for
+some expected intervention directions.
+
+66
+00:12:50,000 --> 00:13:02,000
+Those failures reinforce why simulator changes should not
+be presented as guaranteed risk reduction.
+
+67
+00:13:02,000 --> 00:13:14,000
+If the Horizons view is available, I’ll open
+it and show how metrics vary by horizon.
+
+68
+00:13:14,000 --> 00:13:26,000
+I’ll scroll through the report at a
+steady pace so the comparison labels remain readable.
+
+69
+00:13:26,000 --> 00:13:38,000
+Stored evaluation figures are useful for reviewing this
+prototype, but are not independently reproduced here.
+
+70
+00:13:38,000 --> 00:13:50,000
+The report’s caveats are part of the
+result and belong in the demo.
+
+71
+00:13:50,000 --> 00:14:02,000
+Next I’ll open Settings and review the
+preferences available in this local application.
+
+72
+00:14:02,000 --> 00:14:14,000
+Glucose units, alert threshold, prediction horizon, data-source
+label, and theme are configurable here.
+
+73
+00:14:14,000 --> 00:14:26,000
+The interface clarifies that changing the displayed horizon
+does not change the model’s trained target.
+
+74
+00:14:26,000 --> 00:14:38,000
+The privacy log is stored locally and
+is not a clinical consent workflow.
+
+75
+00:14:38,000 --> 00:14:50,000
+I’ll return to Home for a final
+look at the complete dashboard.
+
+76
+00:14:50,000 --> 00:15:02,000
+HealthTwin brings patient context, simulated streams, forecasts,
+and model explanations into one interface.
+
+77
+00:15:02,000 --> 00:15:14,000
+Its value in this demo is transparent exploration,
+including visible limitations and evaluation caveats.
+
+78
+00:15:14,000 --> 00:15:26,000
+It is a research prototype using synthetic data,
+not a clinical decision-support product.
+
+79
+00:15:26,000 --> 00:15:38,000
+Model outputs are not medical advice; no treatment
+decisions should be made from this demonstration.
+
+80
+00:15:38,000 --> 00:15:50,000
+Thank you for watching this walkthrough of
+the HealthTwin website and its current boundaries.
+
+81
+00:15:50,000 --> 00:16:00,000
+This concludes the walkthrough. HealthTwin remains a
+research prototype using synthetic data.
